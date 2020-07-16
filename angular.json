@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "socialposts"
+    }
+  },
+  "defaultProject": "socialposts",
+  "cli": {
+    "analytics": "413c8c99-379e-4cee-9ed7-ac151f39882e"
+  }
 }
