@@ -1,1 +1,9 @@
-<p>post works!</p>
+<li *ngFor = 'let item of posts; index as i;'>
+    <div class='post'>
+        <span><h2>{{ item.title }}</h2></span>
+        <span>
+            {{ item.thought }}
+            <button id='delete' (click)='deletePost(item)'>X</button>
+        </span>
+    </div>
+</li>

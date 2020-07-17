@@ -1,1 +1,10 @@
-<p>social-posts works!</p>
+<body>
+<h1>Deep Thoughts</h1>
+<button class='new-thought' (click)='toggleDisplay()'>New Thought</button>
+<div class='content'>
+    <ul class='post-list'>
+        <app-post [posts]='posts' (deleted)='onDelete($event)'></app-post> 
+    </ul>
+</div>
+<app-post-form (submitted)='onSubmit($event) '*ngIf='!isShow'></app-post-form>
+</body>

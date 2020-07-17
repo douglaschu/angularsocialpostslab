@@ -1,0 +1,19 @@
+body {
+    font-family: Dosis;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#thought {
+    height: 5 em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+}
