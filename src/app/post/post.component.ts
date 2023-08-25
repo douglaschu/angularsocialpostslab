@@ -12,7 +12,9 @@ export class PostComponent implements OnInit {
 
   @Output() deleted = new EventEmitter<object>();
   deletePost = (post: Post) => {
-    this.posts = this.posts.filter( t => t.title !== post.title );
+    this.deleted.emit(post);
+    //original code from lab submission, using delete method from previous project. Causes bug 
+    //this.posts = this.posts.filter( t => t.title !== post.title );
   };
 
   constructor() { }
