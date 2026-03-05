@@ -5,24 +5,20 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',
-  styleUrls: ['./post-form.component.css']
+  styleUrls: ['./post-form.component.css'],
 })
 export class PostFormComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+  @Input() posts: Post[];
 
-  @Input() posts: Post [];
-
-  @Output() submitted = new EventEmitter<object>();
+  @Output() submitted = new EventEmitter<Post>();
   submitPost = (submit: NgForm) => {
     this.submitted.emit({
-      title: submit.value.title, 
-      thought: submit.value.thought
+      title: submit.value.title,
+      thought: submit.value.thought,
     });
-  }
-    
-
+  };
 }
